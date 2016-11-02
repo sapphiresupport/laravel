@@ -1,0 +1,16 @@
+[2016-11-02 17:45:36] production.ERROR: ErrorException: file_get_contents(/var/www/laravel/.env): failed to open stream: No such file or directory in /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:57
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', '/var/www/larave...', 57, Array)
+#1 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(57): file_get_contents('/var/www/larave...')
+#2 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(39): Illuminate\Foundation\Console\KeyGenerateCommand->setKeyInEnvironmentFile('base64:3PtqZtQi...')
+#3 [internal function]: Illuminate\Foundation\Console\KeyGenerateCommand->fire()
+#4 /var/www/laravel/bootstrap/cache/compiled.php(1272): call_user_func_array(Array, Array)
+#5 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#6 /var/www/laravel/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/laravel/vendor/symfony/console/Application.php(820): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/laravel/vendor/symfony/console/Application.php(187): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\KeyGenerateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /var/www/laravel/vendor/symfony/console/Application.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/laravel/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
